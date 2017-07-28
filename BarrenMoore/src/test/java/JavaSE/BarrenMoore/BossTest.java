@@ -5,7 +5,7 @@ import static org.junit.Assert.*;
 import org.junit.Test;
 
 public class BossTest {
-	CreateBoss c= new CreateBoss();
+	BossStuff c= new BossStuff();
 	Boss b = c.bc(1, 1);	
 
 	@Test
