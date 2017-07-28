@@ -1,11 +1,15 @@
 package JavaSE.BarrenMoore;
+import java.util.HashMap;
 import java.util.concurrent.ThreadLocalRandom;
 
 public class PlayerStuff {  // THE METHODS HERE MOVE THE PLAYER TO AN EVENT
+	RiddleStuff rid = new RiddleStuff();
+	HashMap<Integer, String> Q= rid.ques();
+	HashMap<Integer, String> A= rid.ans();
 	
 	public Player cr() {
 		System.out.println("Please Enter your name: ");
-		String name = InputClass.sc.next();
+		String name = InputClass.sc.nextLine();
 		Player p = new Player(name, false, false, false, 10); //10 is base speed
 		p.setDis(4);
 		p.setOr("N");   //initial distance away from event set at 4 N	
@@ -28,7 +32,7 @@ public class PlayerStuff {  // THE METHODS HERE MOVE THE PLAYER TO AN EVENT
 	
 	public int wh(Player p) {
 		System.out.println("Which direction would you like to go to [N E S W]");
-		String or = InputClass.sc.next();
+		String or = InputClass.sc.nextLine();
 		if (or.equals(p.getOr())) {
 			p.setDis(p.getDis()-1);
 		}
@@ -47,6 +51,7 @@ public class PlayerStuff {  // THE METHODS HERE MOVE THE PLAYER TO AN EVENT
 			}
 		}
 		System.out.println("You have entered an event DUM DUM DUM!!!");
+		rid.ridd(Q,A,d);
 		return d;
 	}
 	
