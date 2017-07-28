@@ -7,7 +7,7 @@ public class Player {
     private boolean inRid;  // in riddle
     private boolean inBoss;   // in boss
     private boolean inFinal;  // in final boss - invoke win condition 
-    private int spe;
+    private int spe; //speed
 	
     
     public Player(String name, boolean inRid, boolean inBoss, boolean inFinal, int spe) {

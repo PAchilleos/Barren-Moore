@@ -8,7 +8,9 @@ import java.util.concurrent.ThreadLocalRandom;
 
 public class RiddleStuff {
 	
+	
 	public HashMap<Integer, String> ques(){
+		//String rrr  = InputClass.sc.next();
 		HashMap<Integer, String> Q= new HashMap<Integer, String>(); // only create this once. creates whole list of riddles and answers
 		String[] q = {"Who?","What","Where","Why"}; //again want to scan these;
 		
